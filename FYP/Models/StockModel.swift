@@ -54,6 +54,7 @@ struct Stock: Codable, Identifiable {
     let ticker: String?
     let name: String?
     let price: Double?
+    let volume: Int?
 }
 
 struct Stock2: Codable, Identifiable {

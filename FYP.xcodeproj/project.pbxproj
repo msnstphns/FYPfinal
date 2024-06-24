@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		999E3F182C29DB9100F530EE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F172C29DB9100F530EE /* Extensions.swift */; };
+		999E3F202C29DE0E00F530EE /* GraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F1F2C29DE0E00F530EE /* GraphData.swift */; };
+		999E3F222C29DF5000F530EE /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F212C29DF5000F530EE /* GraphView.swift */; };
+		999E3F242C29E42E00F530EE /* AAPL.json in Resources */ = {isa = PBXBuildFile; fileRef = 999E3F232C29E42E00F530EE /* AAPL.json */; };
+		999E3F262C29E51900F530EE /* StockGraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F252C29E51900F530EE /* StockGraphData.swift */; };
+		999E3F292C29EE5100F530EE /* NVIDIA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F282C29EE5100F530EE /* NVIDIA.swift */; };
+		999E3F2B2C29EE5A00F530EE /* APPLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F2A2C29EE5A00F530EE /* APPLE.swift */; };
+		999E3F2D2C29EE6200F530EE /* MICROSOFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F2C2C29EE6200F530EE /* MICROSOFT.swift */; };
 		99B89F972C299B8F00AEBD35 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B89F962C299B8F00AEBD35 /* StockModel.swift */; };
 		99B89F9A2C299BC000AEBD35 /* StockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B89F992C299BC000AEBD35 /* StockAPIService.swift */; };
 		99B89F9C2C299BDE00AEBD35 /* StockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B89F9B2C299BDE00AEBD35 /* StockViewModel.swift */; };
@@ -57,6 +65,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		999E3F172C29DB9100F530EE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		999E3F1F2C29DE0E00F530EE /* GraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphData.swift; sourceTree = "<group>"; };
+		999E3F212C29DF5000F530EE /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		999E3F232C29E42E00F530EE /* AAPL.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AAPL.json; sourceTree = "<group>"; };
+		999E3F252C29E51900F530EE /* StockGraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockGraphData.swift; sourceTree = "<group>"; };
+		999E3F282C29EE5100F530EE /* NVIDIA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVIDIA.swift; sourceTree = "<group>"; };
+		999E3F2A2C29EE5A00F530EE /* APPLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPLE.swift; sourceTree = "<group>"; };
+		999E3F2C2C29EE6200F530EE /* MICROSOFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MICROSOFT.swift; sourceTree = "<group>"; };
 		99B89F962C299B8F00AEBD35 /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		99B89F992C299BC000AEBD35 /* StockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockAPIService.swift; sourceTree = "<group>"; };
 		99B89F9B2C299BDE00AEBD35 /* StockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewModel.swift; sourceTree = "<group>"; };
@@ -118,6 +134,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		999E3F102C29D8BD00F530EE /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				999E3F172C29DB9100F530EE /* Extensions.swift */,
+				999E3F1F2C29DE0E00F530EE /* GraphData.swift */,
+				999E3F212C29DF5000F530EE /* GraphView.swift */,
+				999E3F232C29E42E00F530EE /* AAPL.json */,
+				999E3F252C29E51900F530EE /* StockGraphData.swift */,
+			);
+			path = Graphs;
+			sourceTree = "<group>";
+		};
+		999E3F272C29EE1100F530EE /* MoreInfoViews */ = {
+			isa = PBXGroup;
+			children = (
+				999E3F282C29EE5100F530EE /* NVIDIA.swift */,
+				999E3F2A2C29EE5A00F530EE /* APPLE.swift */,
+				999E3F2C2C29EE6200F530EE /* MICROSOFT.swift */,
+			);
+			path = MoreInfoViews;
+			sourceTree = "<group>";
+		};
 		99B89F982C299BAC00AEBD35 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +185,8 @@
 		99E219822C2975C1002263CC = {
 			isa = PBXGroup;
 			children = (
-				99B89FAB2C29AC9700AEBD35 /* GoogleService-Info.plist */,
+				999E3F272C29EE1100F530EE /* MoreInfoViews */,
+				999E3F102C29D8BD00F530EE /* Graphs */,
 				99E2198D2C2975C1002263CC /* FYP */,
 				99E2199F2C2975C3002263CC /* FYPTests */,
 				99E219A92C2975C3002263CC /* FYPUITests */,
@@ -178,6 +217,7 @@
 				99E219902C2975C1002263CC /* ContentView.swift */,
 				99E219922C2975C3002263CC /* Assets.xcassets */,
 				99E219942C2975C3002263CC /* FYP.entitlements */,
+				99B89FAB2C29AC9700AEBD35 /* GoogleService-Info.plist */,
 				99E219952C2975C3002263CC /* Preview Content */,
 			);
 			path = FYP;
@@ -358,6 +398,7 @@
 				99E219972C2975C3002263CC /* Preview Assets.xcassets in Resources */,
 				99E219932C2975C3002263CC /* Assets.xcassets in Resources */,
 				99B89FAC2C29AC9700AEBD35 /* GoogleService-Info.plist in Resources */,
+				999E3F242C29E42E00F530EE /* AAPL.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +425,8 @@
 			files = (
 				99B89FA12C29A16900AEBD35 /* SearchBar.swift in Sources */,
 				99E219BD2C297871002263CC /* NewsView.swift in Sources */,
+				999E3F292C29EE5100F530EE /* NVIDIA.swift in Sources */,
+				999E3F262C29E51900F530EE /* StockGraphData.swift in Sources */,
 				99E219BF2C29787B002263CC /* StockView.swift in Sources */,
 				99B89FA82C29AB8B00AEBD35 /* AuthenticationManager.swift in Sources */,
 				99B89F972C299B8F00AEBD35 /* StockModel.swift in Sources */,
@@ -397,6 +440,11 @@
 				99B89FBD2C29AEA800AEBD35 /* LoginView.swift in Sources */,
 				99B89FBB2C29AE9900AEBD35 /* SignUpView.swift in Sources */,
 				99B89FAA2C29ABC100AEBD35 /* EmailSignIn.swift in Sources */,
+				999E3F202C29DE0E00F530EE /* GraphData.swift in Sources */,
+				999E3F222C29DF5000F530EE /* GraphView.swift in Sources */,
+				999E3F182C29DB9100F530EE /* Extensions.swift in Sources */,
+				999E3F2D2C29EE6200F530EE /* MICROSOFT.swift in Sources */,
+				999E3F2B2C29EE5A00F530EE /* APPLE.swift in Sources */,
 				99B89FBF2C29B08600AEBD35 /* SplashScreen.swift in Sources */,
 				99B89F9A2C299BC000AEBD35 /* StockAPIService.swift in Sources */,
 				99E2198F2C2975C1002263CC /* FYPApp.swift in Sources */,
