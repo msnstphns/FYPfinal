@@ -23,6 +23,7 @@
 		99B89FB72C29AD0C00AEBD35 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 99B89FB62C29AD0C00AEBD35 /* FirebaseStorage */; };
 		99B89FBB2C29AE9900AEBD35 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B89FBA2C29AE9900AEBD35 /* SignUpView.swift */; };
 		99B89FBD2C29AEA800AEBD35 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B89FBC2C29AEA800AEBD35 /* LoginView.swift */; };
+		99B89FBF2C29B08600AEBD35 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B89FBE2C29B08600AEBD35 /* SplashScreen.swift */; };
 		99E2198F2C2975C1002263CC /* FYPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2198E2C2975C1002263CC /* FYPApp.swift */; };
 		99E219912C2975C1002263CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219902C2975C1002263CC /* ContentView.swift */; };
 		99E219932C2975C3002263CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99E219922C2975C3002263CC /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		99B89FAB2C29AC9700AEBD35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99B89FBA2C29AE9900AEBD35 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		99B89FBC2C29AEA800AEBD35 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		99B89FBE2C29B08600AEBD35 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		99E2198B2C2975C1002263CC /* FYP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FYP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E2198E2C2975C1002263CC /* FYPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPApp.swift; sourceTree = "<group>"; };
 		99E219902C2975C1002263CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				99B89F9D2C299BF700AEBD35 /* StockRowView.swift */,
 				99B89FBA2C29AE9900AEBD35 /* SignUpView.swift */,
 				99B89FBC2C29AEA800AEBD35 /* LoginView.swift */,
+				99B89FBE2C29B08600AEBD35 /* SplashScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				99B89FBD2C29AEA800AEBD35 /* LoginView.swift in Sources */,
 				99B89FBB2C29AE9900AEBD35 /* SignUpView.swift in Sources */,
 				99B89FAA2C29ABC100AEBD35 /* EmailSignIn.swift in Sources */,
+				99B89FBF2C29B08600AEBD35 /* SplashScreen.swift in Sources */,
 				99B89F9A2C299BC000AEBD35 /* StockAPIService.swift in Sources */,
 				99E2198F2C2975C1002263CC /* FYPApp.swift in Sources */,
 				99E219C72C2978B5002263CC /* LegalView.swift in Sources */,
