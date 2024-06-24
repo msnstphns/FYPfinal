@@ -11,14 +11,25 @@ struct HomeView: View {
     @StateObject var viewModel = StockViewModel()
     
     var body: some View {
-                List {
-                    ForEach(Array(viewModel.stocks.enumerated()), id: \.element.id) { index, stock in
-                        StockRowView(stock: stock, index: index + 1)
-                    }
+        VStack {
+            Text("StockProphet")
+                .font(.title)
+                .foregroundColor(.cyan)
+                .bold()
+                .padding(.top, 15)
+            
+            SearchBar(text: $viewModel.searchText)
+                .padding(.top)
+            
+            List {
+                ForEach(Array(viewModel.filteredStocks.enumerated()), id: \.element.id) { index, stock in
+                    StockRowView(stock: stock, index: index + 1)
                 }
-        .padding()
-        .task {
-            await viewModel.getStocks()
+            }
+            .padding()
+            .task {
+                await viewModel.getStocks()
+            }
         }
     }
 }
