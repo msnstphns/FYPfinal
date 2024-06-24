@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var viewModel = StockViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                List {
+                    ForEach(Array(viewModel.stocks.enumerated()), id: \.element.id) { index, stock in
+                        StockRowView(stock: stock, index: index + 1)
+                    }
+                }
+        .padding()
+        .task {
+            await viewModel.getStocks()
+        }
     }
 }
 
