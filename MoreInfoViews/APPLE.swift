@@ -35,6 +35,7 @@ struct APPLE: View {
                     DetailRow(title: "Price", value: "$132.54")
                     DetailRow(title: "Volume", value: "28,654,321")
                 }
+                
                 .padding()
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(10)

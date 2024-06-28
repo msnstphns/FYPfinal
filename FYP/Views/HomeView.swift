@@ -9,26 +9,34 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel = StockViewModel()
-    
+    @State private var selectedStock: Stock?
+
     var body: some View {
-        VStack {
-            Text("StockProphet")
-                .font(.title)
-                .foregroundColor(.cyan)
-                .bold()
-                .padding(.top, 15)
-            
-            SearchBar(text: $viewModel.searchText)
-                .padding(.top)
-            
-            List {
-                ForEach(Array(viewModel.filteredStocks.enumerated()), id: \.element.id) { index, stock in
-                    StockRowView(stock: stock, index: index + 1)
+        NavigationView {
+            VStack {
+                Text("StockProphet")
+                    .font(.title)
+                    .foregroundColor(.cyan)
+                    .bold()
+                    .padding(.top, 15)
+                
+                SearchBar(text: $viewModel.searchText)
+                    .padding(.top)
+                
+                List {
+                    ForEach(Array(viewModel.filteredStocks.enumerated()), id: \.element.id) { index, stock in
+                        NavigationLink(destination: APPLE()) {
+                            StockRowView(stock: stock, index: index + 1)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .listRowInsets(EdgeInsets())
+                        .background(Color.clear)
+                    }
                 }
-            }
-            .padding()
-            .task {
-                await viewModel.getStocks()
+                .padding()
+                .task {
+                    await viewModel.getStocks()
+                }
             }
         }
     }

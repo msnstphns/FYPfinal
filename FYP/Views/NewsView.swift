@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct NewsView: View {
+    @StateObject var viewModel = NewsViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            Text("hello world")
+            List {
+                ForEach(viewModel.news) { news in
+                    NewsRowView(news: news)
+                }
+            }
+            .padding()
+            .task {
+                await viewModel.getNews()
+            }
+        }
     }
 }
 

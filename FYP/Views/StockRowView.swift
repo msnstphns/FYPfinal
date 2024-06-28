@@ -13,26 +13,40 @@ struct StockRowView: View {
     var index: Int
     
     var body: some View {
-            HStack {
-                Text("\(index)")
-                    .frame(width: 30, alignment: .leading) // Adjust width as needed
-                    .padding(.leading, 1) // Add padding if necessary
-                
-                Spacer()
-                
-                Text("\(stock.name ?? "")")
+        HStack {
+            Text("\(index)")
+                .font(.subheadline)
+                .foregroundColor(.gray)
+                .frame(width: 30, alignment: .leading)
+            
+            VStack(alignment: .leading) {
+                Text(stock.name ?? "")
                     .font(.headline)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                
-                Spacer()
+                    .foregroundColor(.primary)
                 
                 Text("Current price: £\(String(format: "%.2f", stock.price ?? 0))")
-                    .frame(width: 150, alignment: .trailing) // Adjust width as needed
-                    .padding(.trailing, 10) // Add padding if necessary
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
             }
-            .padding(.vertical, 8) // Adjust vertical padding as needed
+            
+            Spacer()
         }
+        .padding()
+        .background(Color(UIColor.secondarySystemBackground))
+        .cornerRadius(8)
+        .shadow(radius: 2)
+        .padding(.vertical, 4)
     }
+}
+
+struct StockRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        StockRowView(stock: Stock(ticker: "AAPL", name: "Apple", price: 150.0, volume: 200), index: 1)
+            .previewLayout(.sizeThatFits)
+            .padding()
+    }
+}
+
 
 
 //#Preview {
