@@ -8,20 +8,37 @@
 import SwiftUI
 
 struct AccountView: View {
-    @State private var emailAddress = "example@example.com"
+    @State private var emailAddress = ""
     @State private var selectedPlan = StockPredictionPlan.free
     
     enum StockPredictionPlan: String, CaseIterable {
         case free = "Free Version"
         case monthlyPaid = "Monthly Paid Version"
+        
+        var priceText: String {
+            switch self {
+            case .free:
+                return "$0 a month"
+            case .monthlyPaid:
+                return "$7.99 a month"
+            }
+        }
     }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             // Email Address Section
-            Section(header: Text("Email Address")) {
-                Text(emailAddress)
-                    .font(.headline)
+            Section(header: Text("Email Address:\(emailAddress)")) {
+            }
+            
+            // Change Password Section
+            Section {
+                Button(action: {
+                    changePassword()
+                }) {
+                    Text("Change Password")
+                        .foregroundColor(.blue)
+                }
             }
             
             // Stock Prediction Plan Section
@@ -33,15 +50,16 @@ struct AccountView: View {
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
-            }
-            
-            // Change Password Section
-            Section {
-                Button(action: {
-                    changePassword()
-                }) {
-                    Text("Change Password")
-                        .foregroundColor(.blue)
+                
+                Text(selectedPlan.priceText)
+                    .padding(.top, 10)
+                    .foregroundColor(.black)
+                    .font(.headline)
+                
+                if selectedPlan == .monthlyPaid {
+                    Text("Includes extra features")
+                        .foregroundColor(.black)
+                        .font(.subheadline)
                 }
             }
             
@@ -64,4 +82,3 @@ struct AccountView_Previews: PreviewProvider {
         }
     }
 }
-

@@ -14,11 +14,17 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("StockProphet")
-                    .font(.title)
-                    .foregroundColor(.cyan)
-                    .bold()
-                    .padding(.top, 15)
+                HStack {
+                    SFButton(SFButton: "info")
+                    
+                    Text("StockProphet")
+                        .font(.title)
+                        .foregroundColor(.cyan)
+                        .bold()
+                        .padding(.top, 15)
+                    
+                    SFButton(SFButton: "dollarsign")
+                }
                 
                 SearchBar(text: $viewModel.searchText)
                     .padding(.top)

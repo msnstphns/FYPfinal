@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9978AAF12C31731700056346 /* SFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978AAF02C31731700056346 /* SFButton.swift */; };
+		9978AAF32C31781200056346 /* AuthAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978AAF22C31781200056346 /* AuthAdmin.swift */; };
 		999E3F182C29DB9100F530EE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F172C29DB9100F530EE /* Extensions.swift */; };
 		999E3F202C29DE0E00F530EE /* GraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F1F2C29DE0E00F530EE /* GraphData.swift */; };
 		999E3F222C29DF5000F530EE /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F212C29DF5000F530EE /* GraphView.swift */; };
@@ -40,7 +42,6 @@
 		99E219AB2C2975C3002263CC /* FYPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219AA2C2975C3002263CC /* FYPUITests.swift */; };
 		99E219AD2C2975C3002263CC /* FYPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219AC2C2975C3002263CC /* FYPUITestsLaunchTests.swift */; };
 		99E219BD2C297871002263CC /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219BC2C297871002263CC /* NewsView.swift */; };
-		99E219BF2C29787B002263CC /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219BE2C29787B002263CC /* StockView.swift */; };
 		99E219C32C297896002263CC /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219C22C297896002263CC /* NotesView.swift */; };
 		99E219C52C2978AA002263CC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219C42C2978AA002263CC /* HomeView.swift */; };
 		99E219C72C2978B5002263CC /* LegalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219C62C2978B5002263CC /* LegalView.swift */; };
@@ -70,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9978AAF02C31731700056346 /* SFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFButton.swift; sourceTree = "<group>"; };
+		9978AAF22C31781200056346 /* AuthAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAdmin.swift; sourceTree = "<group>"; };
 		999E3F172C29DB9100F530EE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		999E3F1F2C29DE0E00F530EE /* GraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphData.swift; sourceTree = "<group>"; };
 		999E3F212C29DF5000F530EE /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
@@ -102,7 +105,6 @@
 		99E219AA2C2975C3002263CC /* FYPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPUITests.swift; sourceTree = "<group>"; };
 		99E219AC2C2975C3002263CC /* FYPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		99E219BC2C297871002263CC /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
-		99E219BE2C29787B002263CC /* StockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
 		99E219C22C297896002263CC /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		99E219C42C2978AA002263CC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		99E219C62C2978B5002263CC /* LegalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalView.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				99B89FA02C29A16900AEBD35 /* SearchBar.swift */,
 				99B89FA42C29A5C300AEBD35 /* TabsView.swift */,
+				9978AAF02C31731700056346 /* SFButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			children = (
 				99B89FA72C29AB8B00AEBD35 /* AuthenticationManager.swift */,
 				99B89FA92C29ABC100AEBD35 /* EmailSignIn.swift */,
+				9978AAF22C31781200056346 /* AuthAdmin.swift */,
 			);
 			path = FirebaseAuthentication;
 			sourceTree = "<group>";
@@ -264,7 +268,6 @@
 			isa = PBXGroup;
 			children = (
 				99E219BC2C297871002263CC /* NewsView.swift */,
-				99E219BE2C29787B002263CC /* StockView.swift */,
 				99E219C22C297896002263CC /* NotesView.swift */,
 				99E219C42C2978AA002263CC /* HomeView.swift */,
 				99E219C62C2978B5002263CC /* LegalView.swift */,
@@ -443,7 +446,7 @@
 				99E219BD2C297871002263CC /* NewsView.swift in Sources */,
 				999E3F292C29EE5100F530EE /* NVIDIA.swift in Sources */,
 				999E3F262C29E51900F530EE /* StockGraphData.swift in Sources */,
-				99E219BF2C29787B002263CC /* StockView.swift in Sources */,
+				9978AAF32C31781200056346 /* AuthAdmin.swift in Sources */,
 				99B89FA82C29AB8B00AEBD35 /* AuthenticationManager.swift in Sources */,
 				99F7576D2C2EE47C00992F58 /* NewsViewModel.swift in Sources */,
 				99B89F972C299B8F00AEBD35 /* StockModel.swift in Sources */,
@@ -465,6 +468,7 @@
 				99F7576B2C2EE45700992F58 /* NewsModel.swift in Sources */,
 				999E3F2D2C29EE6200F530EE /* MICROSOFT.swift in Sources */,
 				999E3F2B2C29EE5A00F530EE /* APPLE.swift in Sources */,
+				9978AAF12C31731700056346 /* SFButton.swift in Sources */,
 				99B89FBF2C29B08600AEBD35 /* SplashScreen.swift in Sources */,
 				99B89F9A2C299BC000AEBD35 /* StockAPIService.swift in Sources */,
 				99E2198F2C2975C1002263CC /* FYPApp.swift in Sources */,
