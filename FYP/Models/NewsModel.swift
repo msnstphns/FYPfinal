@@ -35,9 +35,9 @@ struct NewsResponse: Codable {
 
 struct News: Codable, Identifiable {
     let id = UUID()
-    let title: String
-    let author: String
-    let description: String
+    let title: String?
+    let author: String?
+    let description: String?
 }
 
 

@@ -15,7 +15,7 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 HStack {
-                    SFButton(SFButton: "info")
+                   // SFButton(SFButton: "info")
                     
                     Text("StockProphet")
                         .font(.title)
@@ -23,7 +23,7 @@ struct HomeView: View {
                         .bold()
                         .padding(.top, 15)
                     
-                    SFButton(SFButton: "dollarsign")
+                    //SFButton(SFButton: "dollarsign")
                 }
                 
                 SearchBar(text: $viewModel.searchText)

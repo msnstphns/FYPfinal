@@ -7,7 +7,18 @@
 
 import SwiftUI
 
+final class LogOutViewModel: ObservableObject {
+    
+    func signOut() throws {
+        try AuthenticationManager.shared.signOut()
+    }
+}
+
 struct AccountView: View {
+    
+    @StateObject private var viewModel = LogOutViewModel()
+    @Binding var showingSignUpView: Bool
+    
     @State private var emailAddress = ""
     @State private var selectedPlan = StockPredictionPlan.free
     
@@ -26,7 +37,7 @@ struct AccountView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading, spacing: 50) {
             // Email Address Section
             Section(header: Text("Email Address:\(emailAddress)")) {
             }
@@ -38,6 +49,19 @@ struct AccountView: View {
                 }) {
                     Text("Change Password")
                         .foregroundColor(.blue)
+                }
+            }
+            
+            // Logout User Section
+            Button("Log out") {
+                Task {
+                    do {
+                        try viewModel.signOut()
+                        // Set showingSignUpView to true to switch to SignUpView
+                        showingSignUpView = true
+                    } catch {
+                        print("Error signing out: \(error.localizedDescription)")
+                    }
                 }
             }
             
@@ -71,14 +95,15 @@ struct AccountView: View {
     
     private func changePassword() {
         // Implement password change logic here
-        print("Changing password...")
+        // test output
+        print("Password successfully changed")
     }
 }
 
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            AccountView()
+            AccountView(showingSignUpView: .constant(false))
         }
     }
 }

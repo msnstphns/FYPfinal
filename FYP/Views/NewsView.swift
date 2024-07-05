@@ -13,7 +13,11 @@ struct NewsView: View {
     var body: some View {
         
         VStack {
-            Text("hello world")
+            Text("Latest News")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .padding(.top, 20)
             List {
                 ForEach(viewModel.news) { news in
                     NewsRowView(news: news)

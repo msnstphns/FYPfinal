@@ -41,6 +41,7 @@ struct StockRowView: View {
 
 struct StockRowView_Previews: PreviewProvider {
     static var previews: some View {
+       // example data for showing what a row of stocks would look like
         StockRowView(stock: Stock(ticker: "AAPL", name: "Apple", price: 150.0, volume: 200), index: 1)
             .previewLayout(.sizeThatFits)
             .padding()
@@ -48,7 +49,7 @@ struct StockRowView_Previews: PreviewProvider {
 }
 
 
-
+// code below if more variables were added
 //#Preview {
 //    StockRowView(stock: (Stock(ticker: nil, name: "Apple", exchangeShort: nil, exchangeLong: nil, micCode: nil, currency: nil, price: 500, dayHigh: nil, dayLow: nil, dayOpen: nil, week52High: nil, week52Low: nil, marketCap: nil, previousClosePrice: nil, previousClosePriceTime: nil, dayChange: nil, volume: nil, isExtendedHoursPrice: nil, lastTradeTime: nil)))
 //}

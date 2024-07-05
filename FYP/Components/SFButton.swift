@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SFButton: View {
     
+    // empty variable so user can apply whichever SF symbol from Apple they wish 
     let SFButton: String
     
     var body: some View {

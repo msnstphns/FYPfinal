@@ -20,6 +20,7 @@ class StockViewModel: ObservableObject {
         stocks = await api.fetchStocks()
     }
     
+    // search bar to filter stocks
     var filteredStocks: [Stock] {
             if searchText.isEmpty {
                 return stocks

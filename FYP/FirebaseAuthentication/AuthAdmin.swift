@@ -8,7 +8,7 @@
 // Firebase SKD
 // Managing accounts
 
-import Foundation
+/*import Foundation
 import Firebase
 
 struct authResultModel {
@@ -42,3 +42,4 @@ final class AuthAdmin {
         try Auth.auth().signOut()
     }
 }
+*/

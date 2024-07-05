@@ -30,7 +30,7 @@ struct TabsView: View {
                     Label("Predictions", systemImage: "chart.xyaxis.line")
                 }
             
-            AccountView()
+            AccountView(showingSignUpView: .constant(false))
                 .tabItem {
                     Label("Account", systemImage: "person")
                 }

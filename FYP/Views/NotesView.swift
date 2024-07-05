@@ -3,11 +3,11 @@
 //  FYP
 //
 //  Created by Mason Stephens on 24/06/2024.
-//
+//  reference to original code that has been modified/adapted https://peterfriese.github.io/MakeItSo/tutorials/makeitso/01-building-a-simple-todo-list-ui/
 
 import SwiftUI
 
-// Define a struct for a TaskItem
+// variables for task
 struct TaskItem: Identifiable {
     var id = UUID()
     var title: String
@@ -15,26 +15,26 @@ struct TaskItem: Identifiable {
 }
 
 struct NotesView: View {
-    // State property to hold the list of tasks
+    // variable to hold the list of tasks
     @State private var taskItems: [TaskItem] = []
     @State private var newTaskTitle: String = ""
     
     var body: some View {
         NavigationView {
             VStack {
-                // Text Field to input new task
-                TextField("Add a new task", text: $newTaskTitle)
+                // field to input new task/note
+                TextField("Add a new task/note", text: $newTaskTitle)
                     .padding()
                     .font(.title3)
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(8)
                     .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
                 
-                // Button to add new task
+                // button to add new task
                 Button(action: {
                     addTaskItem()
                 }) {
-                    Text("Add")
+                    Text("Add note")
                         .padding(.vertical, 10)
                         .padding(.horizontal, 20)
                         .background(Color.blue)
@@ -45,7 +45,7 @@ struct NotesView: View {
                 }
                 .padding(.top, 10)
                 
-                // List to display tasks
+                // list here in a loop to display tasks
                 List {
                     ForEach(taskItems) { taskItem in
                         HStack {
@@ -76,7 +76,7 @@ struct NotesView: View {
         .navigationViewStyle(StackNavigationViewStyle())
     }
     
-    // Function to add a new task
+    // function add a new task
     func addTaskItem() {
         if !newTaskTitle.isEmpty {
             let newTaskItem = TaskItem(title: newTaskTitle)
@@ -85,14 +85,14 @@ struct NotesView: View {
         }
     }
     
-    // Function to toggle task completion
+    // function toggle task completion
     func toggleTaskCompletion(_ taskItem: TaskItem) {
         if let index = taskItems.firstIndex(where: { $0.id == taskItem.id }) {
             taskItems[index].isCompleted.toggle()
         }
     }
     
-    // Function to delete a task
+    // function delete a task
     func deleteTaskItem(at offsets: IndexSet) {
         taskItems.remove(atOffsets: offsets)
     }
