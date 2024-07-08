@@ -23,20 +23,29 @@ final class LoginViewModel: ObservableObject {
         }
         
         Task {
-            do {
-                let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
-                // print to terminal for testing
-                print("User successfully logged in")
-                loginError = nil
-                isLoggedIn = true // update state to reflect successful login
-            } catch {
-                // print to terminal for testing
-                print("Login error: \(error.localizedDescription)")
-                loginError = error.localizedDescription
-                isLoggedIn = false // ensure the state reflects unsuccessful login
+                do {
+                    let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
+                    // print to terminal for testing
+                    print("User successfully logged in")
+                    loginError = nil
+                    isLoggedIn = true // update state to reflect successful login
+                } catch let error as NSError {
+                    // print to terminal for testing
+                    print("Login error: \(error.localizedDescription)")
+                    if let authErrorCode = AuthErrorCode.Code(rawValue: error.code) {
+                        switch authErrorCode {
+                        case .userNotFound:
+                            loginError = "No user found with this email."
+                        default:
+                            loginError = error.localizedDescription
+                        }
+                    } else {
+                        loginError = "An unknown error occurred."
+                    }
+                    isLoggedIn = false // ensure the state reflects unsuccessful login
+                }
             }
         }
-    }
 }
 
 struct LoginView: View {
@@ -82,10 +91,15 @@ struct LoginView: View {
                 }
                 .padding(.bottom, 20)
                 
-                Text("Don't have an account? Sign up here")
-                    .foregroundColor(.blue)
-                    .onTapGesture {
-                    }
+                NavigationLink(
+                    destination: SignUpView()
+                        .navigationBarBackButtonHidden(true)
+                ) {
+                    Text("Don't have an account yet? Click here to sign up!")
+                        .padding()
+                        .foregroundColor(.blue)
+                        .bold()
+                }
                 
                 // navigationLink to HomeView
                 NavigationLink(
