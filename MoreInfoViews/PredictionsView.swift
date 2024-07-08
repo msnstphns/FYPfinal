@@ -39,8 +39,7 @@ struct PredictionsView: View {
                         Picker("Select Days", selection: $selectedDays) {
                             ForEach(daysOptions, id: \.self) { days in
                                 Text("\(days) days")
-                            }
-                    }
+                            }}
                         .pickerStyle(SegmentedPickerStyle())
                     }
                 }

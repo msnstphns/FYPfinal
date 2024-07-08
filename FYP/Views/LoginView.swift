@@ -28,12 +28,12 @@ final class LoginViewModel: ObservableObject {
                 // print to terminal for testing
                 print("User successfully logged in")
                 loginError = nil
-                isLoggedIn = true // Update state to reflect successful login
+                isLoggedIn = true // update state to reflect successful login
             } catch {
                 // print to terminal for testing
                 print("Login error: \(error.localizedDescription)")
                 loginError = error.localizedDescription
-                isLoggedIn = false // Ensure the state reflects unsuccessful login
+                isLoggedIn = false // ensure the state reflects unsuccessful login
             }
         }
     }
@@ -85,16 +85,15 @@ struct LoginView: View {
                 Text("Don't have an account? Sign up here")
                     .foregroundColor(.blue)
                     .onTapGesture {
-                        // Action to navigate to the SignUpView
                     }
                 
-                // NavigationLink to HomeView
+                // navigationLink to HomeView
                 NavigationLink(
                     destination: TabsView()
-                        .navigationBarBackButtonHidden(true), // Hide the back button in HomeView
+                        .navigationBarBackButtonHidden(true), // hide the back button in HomeView
                     isActive: $viewModel.isLoggedIn,
                     label: { EmptyView() }
-                ).hidden() // Hide the link, as we're using the state to trigger navigation
+                ).hidden()
             }
             .padding()
         }

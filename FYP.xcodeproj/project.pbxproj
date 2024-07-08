@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9978AAF12C31731700056346 /* SFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978AAF02C31731700056346 /* SFButton.swift */; };
-		9978AAF32C31781200056346 /* AuthAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978AAF22C31781200056346 /* AuthAdmin.swift */; };
 		999E3F182C29DB9100F530EE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F172C29DB9100F530EE /* Extensions.swift */; };
 		999E3F202C29DE0E00F530EE /* GraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F1F2C29DE0E00F530EE /* GraphData.swift */; };
 		999E3F222C29DF5000F530EE /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E3F212C29DF5000F530EE /* GraphView.swift */; };
@@ -24,7 +23,6 @@
 		99B89FA12C29A16900AEBD35 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B89FA02C29A16900AEBD35 /* SearchBar.swift */; };
 		99B89FA52C29A5C300AEBD35 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B89FA42C29A5C300AEBD35 /* TabsView.swift */; };
 		99B89FA82C29AB8B00AEBD35 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B89FA72C29AB8B00AEBD35 /* AuthenticationManager.swift */; };
-		99B89FAA2C29ABC100AEBD35 /* EmailSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B89FA92C29ABC100AEBD35 /* EmailSignIn.swift */; };
 		99B89FAC2C29AC9700AEBD35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99B89FAB2C29AC9700AEBD35 /* GoogleService-Info.plist */; };
 		99B89FAF2C29AD0C00AEBD35 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 99B89FAE2C29AD0C00AEBD35 /* FirebaseAnalytics */; };
 		99B89FB12C29AD0C00AEBD35 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 99B89FB02C29AD0C00AEBD35 /* FirebaseAuth */; };
@@ -40,7 +38,6 @@
 		99E219972C2975C3002263CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99E219962C2975C3002263CC /* Preview Assets.xcassets */; };
 		99E219A12C2975C3002263CC /* FYPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219A02C2975C3002263CC /* FYPTests.swift */; };
 		99E219AB2C2975C3002263CC /* FYPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219AA2C2975C3002263CC /* FYPUITests.swift */; };
-		99E219AD2C2975C3002263CC /* FYPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219AC2C2975C3002263CC /* FYPUITestsLaunchTests.swift */; };
 		99E219BD2C297871002263CC /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219BC2C297871002263CC /* NewsView.swift */; };
 		99E219C32C297896002263CC /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219C22C297896002263CC /* NotesView.swift */; };
 		99E219C52C2978AA002263CC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E219C42C2978AA002263CC /* HomeView.swift */; };
@@ -70,9 +67,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		99F7AD452C3834C400E350DE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9978AAF02C31731700056346 /* SFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFButton.swift; sourceTree = "<group>"; };
-		9978AAF22C31781200056346 /* AuthAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAdmin.swift; sourceTree = "<group>"; };
 		999E3F172C29DB9100F530EE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		999E3F1F2C29DE0E00F530EE /* GraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphData.swift; sourceTree = "<group>"; };
 		999E3F212C29DF5000F530EE /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
@@ -88,7 +97,6 @@
 		99B89FA02C29A16900AEBD35 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		99B89FA42C29A5C300AEBD35 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		99B89FA72C29AB8B00AEBD35 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
-		99B89FA92C29ABC100AEBD35 /* EmailSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignIn.swift; sourceTree = "<group>"; };
 		99B89FAB2C29AC9700AEBD35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99B89FBA2C29AE9900AEBD35 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		99B89FBC2C29AEA800AEBD35 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -103,7 +111,6 @@
 		99E219A02C2975C3002263CC /* FYPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPTests.swift; sourceTree = "<group>"; };
 		99E219A62C2975C3002263CC /* FYPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FYPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E219AA2C2975C3002263CC /* FYPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPUITests.swift; sourceTree = "<group>"; };
-		99E219AC2C2975C3002263CC /* FYPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		99E219BC2C297871002263CC /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		99E219C22C297896002263CC /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		99E219C42C2978AA002263CC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -114,6 +121,7 @@
 		99F7576A2C2EE45700992F58 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		99F7576C2C2EE47C00992F58 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		99F7576E2C2EE4A500992F58 /* NewsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRowView.swift; sourceTree = "<group>"; };
+		99F7AD362C3834C400E350DE /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,8 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				99B89FA72C29AB8B00AEBD35 /* AuthenticationManager.swift */,
-				99B89FA92C29ABC100AEBD35 /* EmailSignIn.swift */,
-				9978AAF22C31781200056346 /* AuthAdmin.swift */,
 			);
 			path = FirebaseAuthentication;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 				99E2198D2C2975C1002263CC /* FYP */,
 				99E2199F2C2975C3002263CC /* FYPTests */,
 				99E219A92C2975C3002263CC /* FYPUITests */,
+				99F7AD352C3834C400E350DE /* Frameworks */,
 				99E2198C2C2975C1002263CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -259,7 +266,6 @@
 			isa = PBXGroup;
 			children = (
 				99E219AA2C2975C3002263CC /* FYPUITests.swift */,
-				99E219AC2C2975C3002263CC /* FYPUITestsLaunchTests.swift */,
 			);
 			path = FYPUITests;
 			sourceTree = "<group>";
@@ -299,6 +305,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		99F7AD352C3834C400E350DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99F7AD362C3834C400E350DE /* AuthenticationServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -309,6 +323,7 @@
 				99E219872C2975C1002263CC /* Sources */,
 				99E219882C2975C1002263CC /* Frameworks */,
 				99E219892C2975C1002263CC /* Resources */,
+				99F7AD452C3834C400E350DE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -446,7 +461,6 @@
 				99E219BD2C297871002263CC /* NewsView.swift in Sources */,
 				999E3F292C29EE5100F530EE /* NVIDIA.swift in Sources */,
 				999E3F262C29E51900F530EE /* StockGraphData.swift in Sources */,
-				9978AAF32C31781200056346 /* AuthAdmin.swift in Sources */,
 				99B89FA82C29AB8B00AEBD35 /* AuthenticationManager.swift in Sources */,
 				99F7576D2C2EE47C00992F58 /* NewsViewModel.swift in Sources */,
 				99B89F972C299B8F00AEBD35 /* StockModel.swift in Sources */,
@@ -460,7 +474,6 @@
 				99B89F9E2C299BF700AEBD35 /* StockRowView.swift in Sources */,
 				99B89FBD2C29AEA800AEBD35 /* LoginView.swift in Sources */,
 				99B89FBB2C29AE9900AEBD35 /* SignUpView.swift in Sources */,
-				99B89FAA2C29ABC100AEBD35 /* EmailSignIn.swift in Sources */,
 				999E3F202C29DE0E00F530EE /* GraphData.swift in Sources */,
 				99F7576F2C2EE4A500992F58 /* NewsRowView.swift in Sources */,
 				999E3F222C29DF5000F530EE /* GraphView.swift in Sources */,
@@ -488,7 +501,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99E219AD2C2975C3002263CC /* FYPUITestsLaunchTests.swift in Sources */,
 				99E219AB2C2975C3002263CC /* FYPUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
