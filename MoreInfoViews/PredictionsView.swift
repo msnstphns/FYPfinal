@@ -56,7 +56,7 @@ struct PredictionsView: View {
                 }
                 .padding()
                 
-                // Percentage Change Section. green = positive change, red = negative change
+                // percentage Change Section. green = positive change, red = negative change
                 if percentageChange != 0.0 {
                     VStack {
                         Text("Percentage Change:")
@@ -71,7 +71,7 @@ struct PredictionsView: View {
                     .padding()
                 }
                 
-                // Stock Price Chart Section
+                // stock Price Chart Section
                 if !stockData.isEmpty {
                     StockPriceChart(data: stockData, days: selectedDays)
                         .padding()
@@ -91,7 +91,7 @@ struct PredictionsView: View {
         // fake data to show how to the graph would look using random number generation
         stockData = (1...selectedDays).map { _ in Double.random(in: 100...500) }
         
-        // Calculate the percentage change here
+        // calculate the percentage change here
         if let firstPrice = stockData.first, let lastPrice = stockData.last {
             percentageChange = ((lastPrice - firstPrice) / firstPrice) * 100.0
         } else {
